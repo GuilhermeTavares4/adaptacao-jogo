@@ -11,10 +11,10 @@
 			JOGO MUITO FODA
 		<div class="fundo" id="bg">
 			<div id="div2" >
-				cursor2
+				2
 			</div>
 			<div id="div1">
-				cursor1
+				1
 			</div>
 		</div>
 		<div class="painel">
@@ -40,10 +40,18 @@
             // mover cursor 2 - automático
 			function moverdireita(){
 				div2.style.left = parseInt(getComputedStyle(div2).left)+5;
+				if (screen.width > 600){
 				if ( parseInt(getComputedStyle(div2).left) >= 500  - parseInt(getComputedStyle(div2).width)){
 					clearInterval(m);
 					m = setInterval ("moveresquerda()",15);
 				}
+			}
+			else {
+				if ( parseInt(getComputedStyle(div2).left) >= 300  - parseInt(getComputedStyle(div2).width)){
+					clearInterval(m);
+					m = setInterval ("moveresquerda()",15);
+				}
+			}
 			}
 			function moveresquerda(){
 				div2.style.left = parseInt(getComputedStyle(div2).left)-5;
@@ -80,10 +88,17 @@
 			}
             function direita() {
 				div1.style.left = parseInt(getComputedStyle(div1).left)+5;
+				if (screen.width > 600){
 				if ( parseInt(getComputedStyle(div1).left) >= 900  - parseInt(getComputedStyle(div1).left)){
 					clearInterval(timer);
 					timer = setInterval ("esquerda()",15);
+				}}
+				else {
+					if ( parseInt(getComputedStyle(div1).left) >= 500  - parseInt(getComputedStyle(div1).left)){
+					clearInterval(timer);
+					timer = setInterval ("esquerda()",15);
 				}
+			}
 			}
 
 			function esquerda() {
@@ -145,17 +160,21 @@
 		    }
 
 				function colisao(){
-					if (((parseInt(getComputedStyle(div1).left) >= parseInt(getComputedStyle(div2).left))&&(parseInt(getComputedStyle(div1).left) <= parseInt(getComputedStyle(div2).left)+50))&&
+					if (screen.width > 600){
+						if (((parseInt(getComputedStyle(div1).left) >= parseInt(getComputedStyle(div2).left))&&(parseInt(getComputedStyle(div1).left) <= parseInt(getComputedStyle(div2).left)+50))&&
 						((parseInt(getComputedStyle(div1).top) >= parseInt(getComputedStyle(div2).top))&&(parseInt(getComputedStyle(div1).top) <= parseInt(getComputedStyle(div2).top)+50))){
 							para2();
 							para();
 					}
-					if (((parseInt(getComputedStyle(div2).left) >= parseInt(getComputedStyle(div1).left))&&(parseInt(getComputedStyle(div2).left) <= parseInt(getComputedStyle(div1).left)+50))&&
-						((parseInt(getComputedStyle(div2).top) >= parseInt(getComputedStyle(div1).top))&&(parseInt(getComputedStyle(div2).top) <= parseInt(getComputedStyle(div1).top)+50))){
+					}
+					else {
+						if (((parseInt(getComputedStyle(div1).left) >= parseInt(getComputedStyle(div2).left))&&(parseInt(getComputedStyle(div1).left) <= parseInt(getComputedStyle(div2).left)+40))&&
+						((parseInt(getComputedStyle(div1).top) >= parseInt(getComputedStyle(div2).top))&&(parseInt(getComputedStyle(div1).top) <= parseInt(getComputedStyle(div2).top)+40))){
 							para2();
 							para();
 					}
 				}
+			}
 				function dogfoda(){
 					let tbf = document.createElement("img");
 					tbf.setAttribute("src","./calaboca.gif")
@@ -190,12 +209,6 @@
             document.querySelector("#para").addEventListener("click",()=>{ para()});
             document.querySelector("#para2").addEventListener("click", ()=>{para2()});
 			document.querySelector("#naoclica").addEventListener("click", dogfoda)
-			
-
-			
-			
-				
-
 		</script>
 	</body>
 </html>
