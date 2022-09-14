@@ -33,6 +33,7 @@
   height: 50px;
   background-color: green;
   text-align: center;
+  line-height: 50px;
   z-index: 1;
 }
 #div1 {
@@ -43,6 +44,7 @@
   height: 50px;
   background-color: green;
   text-align: center;
+  line-height: 50px;
   z-index: 1;
 }
 #tbf {
@@ -66,5 +68,17 @@ button:hover {
   }
   .fundo {
     width: 300px;
+  }
+  button {
+    padding: 10px;
+  }
+  #tbf {
+    left: 65%;
+  }
+  #div1,
+  #div2 {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
   }
 }
