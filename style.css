@@ -60,3 +60,11 @@ button {
 button:hover {
   transform: scaleX(1.1);
 }
+@media (max-width: 600px) {
+  .container {
+    width: 300px;
+  }
+  .fundo {
+    width: 300px;
+  }
+}
