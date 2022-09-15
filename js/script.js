@@ -102,28 +102,11 @@
 			function largura(parametro) {
 				div1.style.width = parseInt(getComputedStyle(div1).width)+parametro;
 			}
-			function cor(){
-			if(cont == 0){
-				document.getElementById("div1").style.backgroundColor="blue";
-				cont++;
-			}else{
-				if(cont == 1){
-					document.getElementById("div1").style.backgroundColor="orange";
-					cont++;
-		   	    }else{
-		   	    if(cont == 2){
-				    document.getElementById("div1").style.backgroundColor="yellow";
-				    cont = 0;
-		        	}
-		        }
-		    }
-
-		    }
 			function colisaodps(){
 				if (lock == 1){
 					return;
 				}
-				let audio = new Audio('../Sound_effects/strawberry_touch.wav');
+				let audio = new Audio('./Sound_effects/strawberry_touch.wav');
 				audio.play();
 			}
 
@@ -138,12 +121,12 @@
 			}
 				function dog(){
 					let tbf = document.createElement("img");
-					tbf.setAttribute("src","../Images/Annoying_Dog.gif")
+					tbf.setAttribute("src","./Images/Annoying_Dog.gif")
 					tbf.setAttribute("id","tbf");
 					tbf.style.width = "100px";
 					tbf.style.height = "145px";
 					document.querySelector("#bg").appendChild(tbf)
-					let audio = new Audio('../Sound_effects/Dog_Residue.wav');
+					let audio = new Audio('./Sound_effects/Dog_Residue.wav');
 					audio.play();
 					document.querySelector("#naoclica").removeEventListener("click", dog)
 					document.querySelector("#naoclica").remove()
@@ -168,7 +151,9 @@
             document.querySelector("#alturaMenos").addEventListener("click", ()=>{altura(-5)});
             document.querySelector("#larguraMais").addEventListener("click", ()=>{largura(5)});
             document.querySelector("#larguraMenos").addEventListener("click", ()=>{largura(-5)});
-            document.querySelector("#cor").addEventListener("click", ()=>{cor()});
             document.querySelector("#para").addEventListener("click",()=>{ para()});
             document.querySelector("#para2").addEventListener("click", ()=>{para2()});
 			document.querySelector("#naoclica").addEventListener("click", dog)
+			document.querySelector("#recomeca").addEventListener("click",()=>{
+				window.location.reload();
+			})
