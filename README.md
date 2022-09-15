@@ -1,1 +1,1 @@
-https://guilhermetavares4.github.io/adaptacao-jogo/
+https://guilhermetavares4.github.io/adaptacao-jogo/html/
