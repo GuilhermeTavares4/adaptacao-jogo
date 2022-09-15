@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+body {
+  background-color: darkred;
+}
 .container {
   width: 500px;
   margin-left: auto;
@@ -5,19 +9,26 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px solid black;
+  border: 2px solid black;
+  background-image: linear-gradient(to right, black, gray);
   border-radius: 5px;
   padding: 10px;
   text-align: center;
 }
 .fundo {
   position: relative;
+  border: 2px solid black;
   top: 0px;
   left: 0px;
   width: 500px;
   height: 300px;
   background-color: rgb(125, 126, 129);
   text-align: center;
+}
+.titulo {
+  font-family: "Comfortaa";
+  color: white;
+  font-size: 1.2rem;
 }
 .painel {
   position: relative;
@@ -29,22 +40,12 @@
   position: absolute;
   top: 10px;
   left: 15px;
-  width: 50px;
-  height: 50px;
-  background-color: green;
-  text-align: center;
-  line-height: 50px;
   z-index: 1;
 }
 #div1 {
   position: absolute;
-  top: 70px;
+  top: 200px;
   left: 70px;
-  width: 50px;
-  height: 50px;
-  background-color: green;
-  text-align: center;
-  line-height: 50px;
   z-index: 1;
 }
 #tbf {
@@ -58,6 +59,37 @@ button {
   box-shadow: 3px 3px 3px black;
   margin: 3px;
   transition: transform 0.4;
+  font-weight: 600;
+  padding: 3px;
+}
+#naoclica {
+  animation: aaa 5s linear infinite;
+}
+@keyframes aaa {
+  from {
+    color: rgba(245, 19, 8, 255);
+  }
+  14.6% {
+    color: rgba(243, 142, 51, 255);
+  }
+  29.2% {
+    color: rgba(245, 244, 1, 255);
+  }
+  43.8% {
+    color: rgba(105, 203, 60, 255);
+  }
+  58.4% {
+    color: rgba(25, 210, 234, 255);
+  }
+  73% {
+    color: rgba(0, 101, 204, 255);
+  }
+  87.5% {
+    color: rgba(151, 53, 152, 255);
+  }
+  100% {
+    color: rgba(245, 19, 8, 255);
+  }
 }
 button:hover {
   transform: scaleX(1.1);
@@ -75,10 +107,12 @@ button:hover {
   #tbf {
     left: 65%;
   }
-  #div1,
-  #div2 {
+  #div1 {
     width: 40px;
     height: 40px;
-    line-height: 40px;
+  }
+  #div2 {
+    width: 32px;
+    height: 42px;
   }
 }
