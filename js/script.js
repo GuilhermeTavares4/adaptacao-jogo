@@ -118,6 +118,13 @@
 							para();
 							lock = 1
 					}
+					if (((parseInt(getComputedStyle(div2).left) >= parseInt(getComputedStyle(div1).left))&&(parseInt(getComputedStyle(div2).left) <= parseInt(getComputedStyle(div1).left)+div1.width))&&
+						((parseInt(getComputedStyle(div2).top) >= parseInt(getComputedStyle(div1).top))&&(parseInt(getComputedStyle(div2).top) <= parseInt(getComputedStyle(div1).top)+div1.height))){
+							colisaodps()
+							para2();
+							para();
+							lock = 1
+					}
 			}
 				function dog(){
 					let tbf = document.createElement("img");
