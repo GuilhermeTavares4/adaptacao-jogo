@@ -1,4 +1,4 @@
-// mover cursor 2 - automático
+            // mover cursor 2 - automático
 			function moverdireita(){
 				div2.style.left = parseInt(getComputedStyle(div2).left)+5;
 				if (screen.width > 600){
@@ -153,7 +153,7 @@
             document.querySelector("#larguraMenos").addEventListener("click", ()=>{largura(-5)});
             document.querySelector("#para").addEventListener("click",()=>{ para()});
             document.querySelector("#para2").addEventListener("click", ()=>{para2()});
-			document.querySelector("#naoclica").addEventListener("click", dog)
-			document.querySelector("#recomeca").addEventListener("click",()=>{
+	    document.querySelector("#naoclica").addEventListener("click", dog)
+	    document.querySelector("#recomeca").addEventListener("click",()=>{
 				window.location.reload();
 			})
