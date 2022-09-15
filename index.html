@@ -10,9 +10,9 @@
 		<div class="container">
 			<div class="titulo">Jogo (?)</div>
 		<div class="fundo" id="bg">
-			<img id="div2" src="./Strawberry.png" >				
+			<img id="div2" src="../Images/Strawberry.png" >				
 			</img>
-			<img id="div1" src="./madeline.jpg">
+			<img id="div1" src="../Images/madeline.jpg">
 			</img>
 		</div>
 		<div class="painel">
@@ -160,7 +160,7 @@
 				if (lock == 1){
 					return;
 				}
-				let audio = new Audio('./strawberry_touch.wav');
+				let audio = new Audio('../Sound effects/strawberry_touch.wav');
 				audio.play();
 			}
 
@@ -175,12 +175,12 @@
 			}
 				function dog(){
 					let tbf = document.createElement("img");
-					tbf.setAttribute("src","./Annoying Dog.gif")
+					tbf.setAttribute("src","../Images/Annoying Dog.gif")
 					tbf.setAttribute("id","tbf");
 					tbf.style.width = "100px";
 					tbf.style.height = "145px";
 					document.querySelector("#bg").appendChild(tbf)
-					let audio = new Audio('./Dog Residue.wav');
+					let audio = new Audio('../Sound effects/Dog Residue.wav');
 					audio.play();
 					document.querySelector("#naoclica").removeEventListener("click", dog)
 					document.querySelector("#naoclica").remove()
