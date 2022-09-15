@@ -157,3 +157,4 @@
 	    document.querySelector("#recomeca").addEventListener("click",()=>{
 				window.location.reload();
 			})
+console.log("nao sei")
