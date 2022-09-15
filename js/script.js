@@ -106,7 +106,7 @@
 				if (lock == 1){
 					return;
 				}
-				let audio = new Audio('./Sound_effects/strawberry_touch.wav');
+				let audio = new Audio('../Sound_effects/strawberry_touch.wav');
 				audio.play();
 			}
 
@@ -121,12 +121,12 @@
 			}
 				function dog(){
 					let tbf = document.createElement("img");
-					tbf.setAttribute("src","./Images/Annoying_Dog.gif")
+					tbf.setAttribute("src","../Images/Annoying_Dog.gif")
 					tbf.setAttribute("id","tbf");
 					tbf.style.width = "100px";
 					tbf.style.height = "145px";
 					document.querySelector("#bg").appendChild(tbf)
-					let audio = new Audio('./Sound_effects/Dog_Residue.wav');
+					let audio = new Audio('../Sound_effects/Dog_Residue.wav');
 					audio.play();
 					document.querySelector("#naoclica").removeEventListener("click", dog)
 					document.querySelector("#naoclica").remove()
