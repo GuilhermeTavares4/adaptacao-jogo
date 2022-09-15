@@ -173,16 +173,16 @@
 							lock = 1
 					}
 			}
-				function dogfoda(){
+				function dog(){
 					let tbf = document.createElement("img");
-					tbf.setAttribute("src","./calaboca.gif")
+					tbf.setAttribute("src","./Annoying Dog.gif")
 					tbf.setAttribute("id","tbf");
 					tbf.style.width = "100px";
 					tbf.style.height = "145px";
 					document.querySelector("#bg").appendChild(tbf)
-					let audio = new Audio('./dog.wav');
+					let audio = new Audio('./Dog Residue.wav');
 					audio.play();
-					document.querySelector("#naoclica").removeEventListener("click", dogfoda)
+					document.querySelector("#naoclica").removeEventListener("click", dog)
 					document.querySelector("#naoclica").remove()
 				}
 
@@ -208,7 +208,7 @@
             document.querySelector("#cor").addEventListener("click", ()=>{cor()});
             document.querySelector("#para").addEventListener("click",()=>{ para()});
             document.querySelector("#para2").addEventListener("click", ()=>{para2()});
-			document.querySelector("#naoclica").addEventListener("click", dogfoda)
+			document.querySelector("#naoclica").addEventListener("click", dog)
 		</script>
 	</body>
 </html>
